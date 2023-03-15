@@ -25,6 +25,7 @@
     "@tensorflow/tfjs": "^4.2.0"
   },
   "devDependencies": {
+    "canvas": "2.11.0",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
     "uglify-js": "^3.17.4"
