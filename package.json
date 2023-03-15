@@ -1,0 +1,32 @@
+{
+  "name": "@kozmonos/image-classifier-web",
+  "version": "0.0.1",
+  "description": "This package allows you to interact with 3 simple functions (init, train, predict) using Tensorflow JS's @tensorflow-models/knn-classifier package.git ",
+  "main": "index.min.js",
+  "scripts": {
+    "build": "uglifyjs  ./index.js  -c  -m --mangle-props reserved=[init,train,predict] -o index.min.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "image classifier",
+    "tensorflow js",
+    "tensorflow image",
+    "tensorflow classifier",
+    "tensorflow knn classifier",
+    "tensorflow knn",
+    "tensorflow knn web",
+    "web image classifier"
+  ],
+  "author": "<onur.m.aycicek@gmail.com> Onur Ayçicek",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow-models/knn-classifier": "^1.2.4",
+    "@tensorflow-models/mobilenet": "^2.1.0",
+    "@tensorflow/tfjs": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "uglify-js": "^3.17.4"
+  }
+}
