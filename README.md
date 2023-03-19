@@ -13,7 +13,7 @@ This package allows you to interact with 3 simple functions (init, train, predic
 ```
 
 ```javascript
-const imageClassifier = require("@kozmonos/image-classifier");
+const imageClassifier = require("@kozmonos/image-classifier-web");
 
 // Initialize the classifier
 const classifier = await imageClassifier.init();
@@ -21,15 +21,15 @@ const classifier = await imageClassifier.init();
 // Train the classifier
 const image = document.getElementById("class0");
 const label = "label";
-classifier.addExample(image, label);
+classifier.train(image, label);
 
 const image2 = document.getElementById("class1");
 const label2 = "label2";
-classifier.addExample(image2, label2);
+classifier.train(image2, label2);
 
 // Predict the class of an image
 const image3 = document.getElementById("test");
-const result = await classifier.predictClass(image);
+const result = await classifier.predict(image);
 /*
  out: {  classIndex: 0, label: 'label2',  confidences: { label2: 0.6666666666666666, label: 0.3333333333333333 } }
 */
